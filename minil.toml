@@ -1,5 +1,5 @@
 name = "Mac-OSVersion-Lite"
-# badges = ["travis"]
+badges = ["travis", "codecov"]
 authority="cpan:PINE"
 license="mit"
 

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pine613/p5-Mac-OSVersion-Lite.svg?branch=master)](https://travis-ci.org/pine613/p5-Mac-OSVersion-Lite) [![Coverage Status](http://codecov.io/github/pine613/p5-Mac-OSVersion-Lite/coverage.svg?branch=master)](https://codecov.io/github/pine613/p5-Mac-OSVersion-Lite?branch=master)
 # NAME
 
 Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
