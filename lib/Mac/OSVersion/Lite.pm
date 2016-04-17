@@ -92,7 +92,7 @@ __END__
 
 =head1 NAME
 
-Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
+Mac::OSVersion::Lite - It's the lightweight version object for Mac OS X
 
 =head1 SYNOPSIS
 
