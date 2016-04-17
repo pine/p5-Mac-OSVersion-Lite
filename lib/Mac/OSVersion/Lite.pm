@@ -63,20 +63,26 @@ sub _init_by_version_string {
 sub _init_by_version_numbers {
     my ($self, $major, $minor) = @_;
 
-    $self->{major} = $major;
+    $self->{major} = $major // 0;
 	$self->{minor} = $minor // 0;
+}
+
+sub name {
+    my $self = shift;
+    my %map  = reverse %{ MAC_VERSION_NAMES() };
+    return %map{$self->as_string};
 }
 
 sub as_string {
     my $self = shift;
-	return $self->{major}.'.'.$self->{minor};
+    return $self->{major}.'.'.$self->{minor};
 }
 
 sub _cmp {
     my ($self, $other) = @_;
 
-	return $self->{major} <=> $other->{major} if $self->{major} != $other->{major};
-	return $self->{minor} <=> $other->{minor};
+    return $self->{major} <=> $other->{major} if $self->{major} != $other->{major};
+    return $self->{minor} <=> $other->{minor};
 }
 
 1;
