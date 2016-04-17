@@ -108,6 +108,46 @@ Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
 
 Mac::OSVersion::Lite is the lightweight version object for Mac OS X with auto detection.
 
+=head1 METHODS
+
+=head2 CLASS METHODS
+
+=head3 C<new()>
+
+Create new C<Mac::OSVersion::Lite> instance with auto detection.
+
+=head3 C<new($version_string)>
+
+Create new C<Mac::OSVersion::Lite> instance from a version string.
+C<Mac::OSVersion::Lite-E<gt>new('10.11')> equals C<Mac::OSVersion::Lite-E<gt>new(10, 11)>.
+
+=head3 C<new($major, $minor = 0)>
+
+Create new C<Mac::OSVersion::Lite> instance from version numbers.
+C<Mac::OSVersion::Lite-E<gt>new(10, 11)> equals C<Mac::OSVersion::Lite-E<gt>new('10.11')>.
+
+=head2 METHODS
+
+=head3 C<major>
+
+Get the major version number.
+
+=head3 C<minor>
+
+Return the minor version number.
+
+=head3 C<E<lt>=E<gt>>
+
+Compare two C<SemVer::V2::Strict> instances.
+
+=head3 C<"">
+
+Convert a C<SemVer::V2::Strict> instance to string.
+
+=head3 C<as_string()>
+
+Convert a C<SemVer::V2::Strict> instance to string.
+
 =head1 SEE ALSO
 
 =over

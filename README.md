@@ -17,6 +17,46 @@ Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
 
 Mac::OSVersion::Lite is the lightweight version object for Mac OS X with auto detection.
 
+# METHODS
+
+## CLASS METHODS
+
+### `new()`
+
+Create new `Mac::OSVersion::Lite` instance with auto detection.
+
+### `new($version_string)`
+
+Create new `Mac::OSVersion::Lite` instance from a version string.
+`Mac::OSVersion::Lite->new('10.11')` equals `Mac::OSVersion::Lite->new(10, 11)`.
+
+### `new($major, $minor = 0)`
+
+Create new `Mac::OSVersion::Lite` instance from version numbers.
+`Mac::OSVersion::Lite->new(10, 11)` equals `Mac::OSVersion::Lite->new('10.11')`.
+
+## METHODS
+
+### `major`
+
+Get the major version number.
+
+### `minor`
+
+Return the minor version number.
+
+### `<=>`
+
+Compare two `SemVer::V2::Strict` instances.
+
+### `""`
+
+Convert a `SemVer::V2::Strict` instance to string.
+
+### `as_string()`
+
+Convert a `SemVer::V2::Strict` instance to string.
+
 # SEE ALSO
 
 - [Mac::OSVersion](https://metacpan.org/pod/Mac::OSVersion)
