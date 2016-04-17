@@ -70,7 +70,7 @@ sub _init_by_version_numbers {
 sub name {
     my $self = shift;
     my %map  = reverse %{ MAC_VERSION_NAMES() };
-    return %map{$self->as_string};
+    return $map{$self->as_string};
 }
 
 sub as_string {
