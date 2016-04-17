@@ -1,6 +1,7 @@
 requires 'perl', '5.010000';
 
 on 'test' => sub {
+    requires 'Perl::Critic', '1.125';
     requires 'Test::Deep', '0.117';
     requires 'Test::Deep::Matcher', '0.01';
     requires 'Test::Exception', '0.40';
@@ -8,6 +9,7 @@ on 'test' => sub {
     requires 'Test::MockObject', '1.20150527';
     requires 'Test::Mock::Cmd', '0.6';
     requires 'Test::Mock::Guard', '0.10';
+    requires 'Test::Perl::Critic', '1.03';
 };
 
 on 'develop' => sub {
