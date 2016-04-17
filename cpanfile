@@ -6,6 +6,7 @@ on 'test' => sub {
     requires 'Test::Exception', '0.40';
     requires 'Test::More', '1.001014';
     requires 'Test::MockObject', '1.20150527';
+    requires 'Test::Mock::Cmd', '0.6';
     requires 'Test::Mock::Guard', '0.10';
 };
 

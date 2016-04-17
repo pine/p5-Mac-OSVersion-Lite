@@ -5,7 +5,79 @@ use utf8;
 
 our $VERSION = "0.01";
 
+use constant VERSION_FORMAT    => qr/(?<major>[0-9]+)(?:\.(?<minor>[0-9]+))?/;
+use constant MAC_VERSION_NAMES => {
+    el_capitan    => "10.11",
+    yosemite      => "10.10",
+    mavericks     => "10.9",
+    mountain_lion => "10.8",
+    lion          => "10.7",
+    snow_leopard  => "10.6",
+    leopard       => "10.5",
+    tiger         => "10.4",
+};
 
+use overload (
+    q{""}    => \&as_string,
+    q{<=>}   => \&_cmp,
+    fallback => 1,
+);
+
+sub major { shift->{major} }
+sub minor { shift->{minor} }
+
+sub new {
+    my $class = shift;
+    my $self  = bless {} => $class;
+
+    $self->_init_by_current_version     if @_ == 0;
+    $self->_init_by_version_string(@_)  if @_ == 1;
+    $self->_init_by_version_numbers(@_) if @_ >= 2;
+
+    return $self;
+}
+
+sub _init_by_current_version {
+    my $self    = shift;
+    my $command = '/usr/bin/sw_vers -productVersion';
+    my $version = `$command`;
+
+    die "Command \`$command\` failed: $version (exit code: $?)\n" if $? != 0;
+
+    $self->_init_by_version_string($version);
+}
+
+sub _init_by_version_string {
+    my ($self, $string) = @_;
+
+    if (defined MAC_VERSION_NAMES->{$string}) {
+        $string = MAC_VERSION_NAMES->{$string};
+    }
+
+    die "Invalid format\n" unless $string =~ qr/^@{[VERSION_FORMAT]}$/;
+
+    $self->{major} = $+{major};
+    $self->{minor} = $+{minor} // 0;
+}
+
+sub _init_by_version_numbers {
+    my ($self, $major, $minor) = @_;
+
+    $self->{major} = $major;
+	$self->{minor} = $minor // 0;
+}
+
+sub as_string {
+    my $self = shift;
+	return $self->{major}.'.'.$self->{minor};
+}
+
+sub _cmp {
+    my ($self, $other) = @_;
+
+	return $self->{major} <=> $other->{major} if $self->{major} != $other->{major};
+	return $self->{minor} <=> $other->{minor};
+}
 
 1;
 __END__

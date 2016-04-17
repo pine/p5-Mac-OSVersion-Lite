@@ -9,3 +9,14 @@ perl:
   - "5.20"
   - "5.22"
 
+before_install:
+  - cpanm --quiet --notest --skip-satisfied Devel::Cover::Report::Codecov
+
+script:
+  - perl Build.PL && ./Build build
+  - prove -r xt
+  - cover -delete
+  - cover -test
+
+after_success:
+  - cover -report codecov
