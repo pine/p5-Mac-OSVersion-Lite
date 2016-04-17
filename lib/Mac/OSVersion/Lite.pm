@@ -97,6 +97,12 @@ Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
 =head1 SYNOPSIS
 
     use Mac::OSVersion::Lite;
+    use feature qw/say/;
+
+    my $version = Mac::OSVersion::Lite->new;
+    say $version->major; # 10
+    say $version->minor; # 11
+    say $version->name;  # el_capitan
 
 =head1 DESCRIPTION
 

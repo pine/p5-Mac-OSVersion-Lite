@@ -6,6 +6,12 @@ Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
 # SYNOPSIS
 
     use Mac::OSVersion::Lite;
+    use feature qw/say/;
+
+    my $version = Mac::OSVersion::Lite->new;
+    say $version->major; # 10
+    say $version->minor; # 11
+    say $version->name;  # el_capitan
 
 # DESCRIPTION
 
