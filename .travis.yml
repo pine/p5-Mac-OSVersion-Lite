@@ -14,7 +14,7 @@ before_install:
 
 script:
   - perl Build.PL && ./Build build
-  # - prove -r xt
+  - prove -r xt
   - cover -test
 
 after_success:
