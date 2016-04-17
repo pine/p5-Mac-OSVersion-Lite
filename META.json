@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "It's the lightweight version obect for Mac OS X",
    "author" : [
       "Pine Mizune"
    ],
@@ -52,6 +52,7 @@
             "Test::Deep" : "0.117",
             "Test::Deep::Matcher" : "0.01",
             "Test::Exception" : "0.40",
+            "Test::Mock::Cmd" : "0.6",
             "Test::Mock::Guard" : "0.10",
             "Test::MockObject" : "1.20150527",
             "Test::More" : "1.001014"
@@ -59,6 +60,20 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/pine613/p5-Mac-OSVersion-Lite/issues"
+      },
+      "homepage" : "https://github.com/pine613/p5-Mac-OSVersion-Lite",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/pine613/p5-Mac-OSVersion-Lite.git",
+         "web" : "https://github.com/pine613/p5-Mac-OSVersion-Lite"
+      }
+   },
    "version" : "0.01",
-   "x_authority" : "cpan:PINE"
+   "x_authority" : "cpan:PINE",
+   "x_contributors" : [
+      "Pine Mizune <pinemz@gmail.com>"
+   ]
 }

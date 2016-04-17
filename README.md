@@ -1,6 +1,6 @@
 # NAME
 
-Mac::OSVersion::Lite - It's new $module
+Mac::OSVersion::Lite - It's the lightweight version obect for Mac OS X
 
 # SYNOPSIS
 
@@ -8,7 +8,11 @@ Mac::OSVersion::Lite - It's new $module
 
 # DESCRIPTION
 
-Mac::OSVersion::Lite is ...
+Mac::OSVersion::Lite is the lightweight version object for Mac OS X with auto detection.
+
+# SEE ALSO
+
+- [Mac::OSVersion](https://metacpan.org/pod/Mac::OSVersion)
 
 # LICENSE
 
