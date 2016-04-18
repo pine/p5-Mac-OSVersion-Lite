@@ -56,7 +56,7 @@ subtest invalid => sub {
 
     throws_ok(sub {
         $version->_init_by_version_string('__invalid_format__');
-    }, qr/\AInvalid format\n\z/);
+    }, qr/\AInvalid format: __invalid_format__\n\z/);
 };
 
 done_testing;

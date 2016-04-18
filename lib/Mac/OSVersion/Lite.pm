@@ -54,7 +54,7 @@ sub _init_by_version_string {
         $string = MAC_VERSION_NAMES->{$string};
     }
 
-    die "Invalid format\n" unless $string =~ qr/^@{[VERSION_FORMAT]}$/;
+    die "Invalid format: $string\n" unless $string =~ qr/^@{[VERSION_FORMAT]}$/;
 
     $self->{major} = $+{major};
     $self->{minor} = $+{minor} // 0;
