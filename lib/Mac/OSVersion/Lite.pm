@@ -5,7 +5,7 @@ use utf8;
 
 our $VERSION = "0.01";
 
-use constant VERSION_FORMAT    => qr/(?<major>[0-9]+)(?:\.(?<minor>[0-9]+))?/;
+use constant VERSION_FORMAT    => qr/(?<major>[0-9]+)(?:\.(?<minor>[0-9]+))?(?:\.(?<point>[0-9]+))?/;
 use constant MAC_VERSION_NAMES => {
     el_capitan    => "10.11",
     yosemite      => "10.10",

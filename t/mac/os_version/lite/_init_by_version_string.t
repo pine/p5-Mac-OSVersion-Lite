@@ -49,6 +49,9 @@ subtest code => sub {
 
     $version->_init_by_version_string('10.11');
     cmp_version $version, 10, 11;
+
+    $version->_init_by_version_string('10.9.3');
+    cmp_version $version, 10, 9;
 };
 
 subtest invalid => sub {
