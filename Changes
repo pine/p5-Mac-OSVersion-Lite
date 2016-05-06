@@ -2,6 +2,10 @@ Revision history for Perl extension Mac-OSVersion-Lite
 
 {{$NEXT}}
 
+0.03 2016-05-06T20:12:35Z
+
+    - fix repository urls and badge urls
+
 0.02 2016-04-18T21:30:54Z
     - fix auto detection version format
 
