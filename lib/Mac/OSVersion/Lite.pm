@@ -7,6 +7,7 @@ our $VERSION = "0.03";
 
 use constant VERSION_FORMAT    => qr/(?<major>[0-9]+)(?:\.(?<minor>[0-9]+))?(?:\.(?<point>[0-9]+))?/;
 use constant MAC_VERSION_NAMES => {
+    sierra        => "10.12",
     el_capitan    => "10.11",
     yosemite      => "10.10",
     mavericks     => "10.9",
