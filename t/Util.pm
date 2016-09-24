@@ -1,5 +1,4 @@
 package t::Util;
-
 use strict;
 use warnings FATAL => 'all';
 use utf8;
