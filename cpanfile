@@ -13,10 +13,12 @@ on 'test' => sub {
 };
 
 on 'develop' => sub {
+    requires 'CPAN::Uploader', '0.103013';
     requires 'Minilla', '3.0.1';
     requires 'Software::License::MIT', '0.103011';
     requires 'Test::CPAN::Meta', '0.25';
     requires 'Test::MinimumVersion::Fast', '0.04';
     requires 'Test::PAUSE::Permissions', '0.05';
     requires 'Test::Spellunker', '0.4.0';
+    requires 'Version::Next', '1.000';
 };
