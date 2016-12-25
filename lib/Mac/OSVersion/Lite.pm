@@ -65,7 +65,7 @@ sub _init_by_version_numbers {
     my ($self, $major, $minor) = @_;
 
     $self->{major} = $major // 0;
-	$self->{minor} = $minor // 0;
+    $self->{minor} = $minor // 0;
 }
 
 sub name {
