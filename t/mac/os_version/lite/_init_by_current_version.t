@@ -2,7 +2,7 @@ use strict;
 use warnings FATAL => 'all';
 use utf8;
 
-use Test::Mock::Cmd qr => \&mock_sw_vers;
+use Test::Mock::Cmd qx => \&mock_sw_vers;
 
 use t::Util;
 use Mac::OSVersion::Lite;
