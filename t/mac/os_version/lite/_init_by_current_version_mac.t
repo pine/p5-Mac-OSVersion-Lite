@@ -4,6 +4,7 @@ use utf8;
 
 use POSIX qw/uname/;
 
+use lib '.';
 use t::Util;
 use Mac::OSVersion::Lite;
 

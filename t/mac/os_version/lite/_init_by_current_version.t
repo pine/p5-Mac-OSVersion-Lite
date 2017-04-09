@@ -4,6 +4,7 @@ use utf8;
 
 use Test::Mock::Cmd qx => \&mock_sw_vers;
 
+use lib '.';
 use t::Util;
 use Mac::OSVersion::Lite;
 
