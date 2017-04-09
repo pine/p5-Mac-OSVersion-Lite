@@ -2,6 +2,9 @@ Revision history for Perl extension Mac-OSVersion-Lite
 
 {{$NEXT}}
 
+0.06 2017-04-09T17:37:28Z
+    - fix broken tests
+
 0.05 2016-12-25T07:28:28Z
     - fix tests
 
