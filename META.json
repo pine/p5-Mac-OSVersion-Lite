@@ -76,7 +76,7 @@
          "web" : "https://github.com/pine/p5-Mac-OSVersion-Lite"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "Pine Mizune <pinemz@gmail.com>"
