@@ -2,6 +2,9 @@ Revision history for Perl extension Mac-OSVersion-Lite
 
 {{$NEXT}}
 
+0.10 2019-09-09T03:19:51Z
+    - support catalina
+
 0.09 2019-05-25T07:27:09Z
     - update document
 
